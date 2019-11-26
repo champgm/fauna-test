@@ -1,0 +1,8 @@
+[submodule "fauna-test-frontend"]
+	path = fauna-test-frontend
+	url = git@personalgithub:champgm/fauna-test-frontend.git
+	branch = master
+[submodule "fauna-test-backend"]
+	path = fauna-test-backend
+	url = git@personalgithub:champgm/fauna-test-backend.git
+	branch = master
