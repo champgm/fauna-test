@@ -1,4 +1,5 @@
 Keeping track of time in parent repo now that child projects are functional and working together
 It's at ~4.25 hours right now, total
 
-
+2019-11-26 15:18 start
+2019-11-26 15:56 stop
