@@ -1,0 +1,17 @@
+{
+  "name": "fauna-test",
+  "version": "1.0.0",
+  "description": "## Assumsptions   * The front end component(s) will be embedded in some other page at some point   * Styling/design will be provided later",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm ci --prefix fauna-test-frontend && npm ci --prefix fauna-test-backend",
+    "start-backend": "npm run start:local --prefix fauna-test-backend",
+    "start-frontend": "npm run start --prefix fauna-test-frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@personalgithub:champgm/fauna-test.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

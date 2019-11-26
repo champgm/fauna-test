@@ -1,0 +1,4 @@
+Keeping track of time in parent repo now that child projects are functional and working together
+It's at ~4.25 hours right now, total
+
+
