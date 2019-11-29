@@ -15,6 +15,7 @@ It's at ~4.25 hours right now, total
 
 2019-11-28 09:47:09 AM start
 2019-11-28 09:53:28 AM stop
+~1hr, 10 min, total is about 5.5hr
 backend tests, done, start work on deployment
 
 2019-11-28 10:08:34 AM start
@@ -26,5 +27,8 @@ backend tests, done, start work on deployment
 2019-11-28 11:51:08 AM start
 2019-11-28 11:56:52 AM stop
 
-forgot to record time, maybe about an hour?
+forgot to record time, maybe about 30 min?
 
+2019-11-29 08:41:09 AM start
+2019-11-29 09:34:36 AM stop
+~2hr, total is about 7.5 hr

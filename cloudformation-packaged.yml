@@ -3,7 +3,7 @@ Resources:
     Properties:
       Code:
         S3Bucket: fauna-test-deployments
-        S3Key: 2b8045898875d3a26874ad783046739f
+        S3Key: 9dfb30cf4fa66ebab8d20af851de478a
       FunctionName: fauna-test
       Handler: tsc-out/src/Handler.handler
       Role:
