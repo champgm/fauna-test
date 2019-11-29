@@ -65,7 +65,7 @@ npm run test-coverage-backend
   * Finish front end unit tests
   * Figure out if there's a way to resolve references on the Fauna DB side instead of the client side, to reduce the number of queries made
   * Enhance models to match retrieval of data, do one of these:
-    * add possibility that a field is actually a reference)
+    * add possibility that a field is actually a reference
     * enhance retrieval to resolve *all* references and match models
   * Did I miss entity ID somewhere? those would've been nice to have on the frontend when displaying orders
-  * Filters/sorting on the customer list would be nice, but definitely out of scope
+  * Filters/sorting on the customer list would be nice, but definitely out of scope. Right now it's sorted by total spent, descending
