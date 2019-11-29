@@ -27,7 +27,7 @@ The above command will install dependencies for both frontend and backend projec
 npm run start-local
 ```
 
-Once they've completed, you should be able to access the backend `order-summary` endpoint [here](http://localhost:8080/fauna-test/order-summary). The frontend should be available [here](http://localhost:3000/fauna-test/). You should see something like this:
+Once they've completed, you should be able to access the backend `order-summary` endpoint [here](http://localhost:8080/fauna-test/order-summary). The frontend should be available [here](http://localhost:8080/fauna-test/). You should see something like this:
 ![frontend screenshot](frontend-screenshot.png)
 
 ### Unit testing
@@ -37,10 +37,9 @@ npm run test-backend
 npm run test-frontend
 ```
 
-These will generate code coverage reports:
+This command will generate backend code coverage reports:
 ```
 npm run test-coverage-backend
-npm run test-coverage-frontend
 ```
 
 ## Decisions/Thought Process
@@ -54,15 +53,16 @@ npm run test-coverage-frontend
 
 ### Frontend
   * I'm not so great at making full pages that look sharp, so I stuck the two frontend Assumptions at the top of this README. I feel like that's a pretty valid assumption since functionality this small is likely to be embedded in some larger page and would probably need to be restyled to fit its look.
-
   * I tried to keep things as modular as possible without going overboard. `LineItemTable` could probably use its own file, but sticking it at the top of `OrderSummaryCard` seemed to make more sense at the time.
+  * I saved frontend unit tests for last, but I probably shouldn't have. I ran out of energy after struggling a little with deployment. You can see some examples of front end tests I've written in my [local-emailer](https://github.com/champgm/local-emailer/blob/React-Native/spec/Emailer.spec.tsx) project though. 
 
 ### Deployment
-  * Probably 80% of the API Gateway deployment resource is not needed. It's from a personal project where I stored the frontend in S3 and the backend API was in a Lambda; most of that is set up so CORS will work. It would take too much time to re-learn how it all works and pick out the unneeded stuff. 
+  * Probably 80% of the API Gateway deployment resource is not needed. It's from a personal project where I stored the frontend in S3 and the backend API was in a Lambda; most of that is set up so CORS will work. For this project, it would take too much time to re-learn how it all works and pick out the unneeded stuff. 
   * Getting react to work properly inside of a Lambda and locally for testing was a little weird, but surprisingly easy.
 
 
 ## Next Steps
+  * Finish front end unit tests
   * Figure out if there's a way to resolve references on the Fauna DB side instead of the client side, to reduce the number of queries made
   * Enhance models to match retrieval of data, do one of these:
     * add possibility that a field is actually a reference)
