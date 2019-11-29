@@ -1,12 +1,22 @@
 {
   "name": "fauna-test",
   "version": "1.0.0",
-  "description": "## Assumsptions   * The front end component(s) will be embedded in some other page at some point   * Styling/design will be provided later",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "install": "npm ci --prefix fauna-test-frontend && npm ci --prefix fauna-test-backend",
     "start-backend": "npm run start:local --prefix fauna-test-backend",
-    "start-frontend": "npm run start --prefix fauna-test-frontend"
+    "test-backend": "npm run test --prefix fauna-test-backend",
+    "start-frontend": "npm run start --prefix fauna-test-frontend",
+    "build": "npm run build --prefix fauna-test-backend && npm run build --prefix fauna-test-frontend",
+    "copy-build": "yes | cp -r fauna-test-frontend/build fauna-test-backend",
+    "zip": "npm run zip --prefix fauna-test-backend",
+    "cf-package": "aws cloudformation --profile personal package --template ./cloudformation.yml --s3-bucket fauna-test-deployments --output-template ./cloudformation-packaged.yml",
+    "package":"npm run build && npm run copy-build && npm run zip && npm run cf-package",
+    "deploy": "aws cloudformation --profile personal deploy --region us-east-1 --template-file ./cloudformation-packaged.yml --stack-name fauna-test --capabilities CAPABILITY_NAMED_IAM",
+    "package-deploy": "npm run package && npm run deploy",
+    "redeploy":"npm run cf-package && npm run deploy",
+    "stop": ":"
   },
   "repository": {
     "type": "git",

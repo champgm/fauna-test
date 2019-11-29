@@ -10,11 +10,14 @@
  * [stream-transform](https://github.com/adaltas/node-stream-transform) an extension of [Transform](https://nodejs.org/api/stream.html#stream_class_stream_transform) used for ease and readability when transforming data in a stream
 
 ## Setup, Demonstration, Testing
+
+### Dependencies
 The project depends on Node.js and NPM. You can find out more about how to install those [here](https://www.npmjs.com/get-npm). Once that's taken care of, ideally, all project dependencies should be installed by running the following command:
 ```bash
 npm install
 ```
 
+### Local testing
 This will install dependencies for both frontend and backend projects. Once that's done, it's best to run these two commands in separate terminals/tabs, so you can see output for each
 ```
 npm run start-backend
@@ -24,6 +27,12 @@ npm run start-frontend
 Once they've completed, you should be able to access the backend `order-summary` endpoint [here](http://localhost:8080/fauna-test-backend/order-summary). If the frontend didn't start up and show something in your browser, you can find that page [here](http://localhost:3000/). You should see something like this:
 ![frontend screenshot](frontend-screenshot.png)
 
+### Unit testing
+Similarly, these two commands will execute unit tests for each project:
+```
+npm run test-backend
+npm run test-frontend
+```
 
 ## Decisions/Thought Process
 ### Backend
@@ -50,3 +59,4 @@ I tried to keep things as modular as possible without going overboard. `LineItem
     * add possibility that a field is actually a reference)
     * enhance retrieval to resolve *all* references and match models
   * Did I miss entity ID somewhere? those would've been nice to have on the frontend when displaying orders
+  * Filters/sorting on the customer list would be nice, but definitely out of scope
